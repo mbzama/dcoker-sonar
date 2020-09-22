@@ -1,14 +1,20 @@
-# Spin up Jenkins CI server and SONARQUBE using docker-compose
+# Spin up SONARQUBE using docker-compose
 
 ## Increase the virtual memory for Elastic Search
 sudo sysctl -w vm.max_map_count=262144
 
 
-## To start Jenkins CI server
-Run `./start-jenkins.sh`
+## To start SonarQube server
+Run `./start-sonar.sh`
 
-For getting default password, run `docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
+Default login:
+	Username: admin
+	Password: admin
 
 
 ## Access the Jenkins CI server
-Navigate to `http://localhost:8081`
+Navigate to `http://localhost:9000`
+
+
+## To stop SonarQube server
+Run `./stop-sonar.sh`
